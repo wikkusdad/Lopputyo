@@ -14,10 +14,6 @@ class _LoginPageState extends State<LoginPage> {
     double h = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Page'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
       body: Column(
         children: [
           Container(
@@ -25,16 +21,34 @@ class _LoginPageState extends State<LoginPage> {
             height: h * 0.3,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("images/Sneakers.png"),
-                fit: BoxFit.cover,
-              ),
+                  image: AssetImage("assets/images/Sneakers.png"),
+                  fit: BoxFit.cover),
             ),
           ),
-          const SizedBox(height: 20.0),
-          const Text(
-            'This is the Login Page',
-            style: TextStyle(fontSize: 20),
-          ),
+          Container(
+              width: w,
+              margin: const EdgeInsets.only(left: 22, right: 22),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hei!',
+                    style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Kirjaudu sisään',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 45,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ],
+              ))
         ],
       ),
     );

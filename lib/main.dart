@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart'; // Tuo login.dart-tiedosto
+import 'login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/', // Määritä aloitussivu
+      initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Flutter Demo'),
-        '/login': (context) => LoginPage(), // Lisää reitti LoginPageen
+        '/login': (context) => LoginPage(),
       },
     );
   }
@@ -63,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                // Navigoi LoginPageen painikkeen painamisen jälkeen
                 Navigator.pushNamed(context, '/login');
               },
               child: const Text('Kirjaudu'),
