@@ -10,12 +10,14 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    //korkeus ja leveys muuttujat
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Column(
         children: [
+          //kuva container
           Container(
             width: w,
             height: h * 0.3,
@@ -26,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Container(
+              //teksti container
               width: w,
               margin: const EdgeInsets.only(left: 22, right: 22),
               child: const Column(
@@ -40,8 +43,15 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                   ),
                   SizedBox(
-                    height: 45,
+                    height: 30, // tilaa ennen textinputteja
                   ),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  SizedBox(
+                      height: 14.0), //lisätään marginaalia laatikoiden väliin
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
