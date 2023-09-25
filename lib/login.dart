@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_app/singup.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -116,13 +117,18 @@ class _LoginPageState extends State<LoginPage> {
                     height: 30,
                   ),
 
-                  Center(
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SignUpPage(),
+                      ));
+                    },
                     child: Text(
                       'Rekisteröidy',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
