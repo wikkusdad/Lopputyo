@@ -14,7 +14,6 @@ class _LoginPageState extends State<LoginPage> {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
 
-    // Määritä lineaarinen gradient
     final LinearGradient scaffoldGradient = LinearGradient(
       colors: [
         const Color.fromARGB(255, 96, 96, 255),
@@ -25,10 +24,10 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.transparent, // Aseta taustaväri läpinäkyväksi
+      backgroundColor: Colors.transparent,
       body: Container(
         decoration: BoxDecoration(
-          gradient: scaffoldGradient, // Käytä gradient-taustaa suoraan
+          gradient: scaffoldGradient,
         ),
         child: Column(
           children: [
@@ -92,22 +91,16 @@ class _LoginPageState extends State<LoginPage> {
                       height: 20), // Lisää tilaa ennen kirjautumispainiketta
                   Center(
                     child: ElevatedButton(
-                      onPressed: () {
-                        // Tässä voit määrittää toiminnallisuuden kirjautumispainikkeelle
-                        // esimerkiksi kirjautumisen toteuttaminen.
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(
                             horizontal: 30, vertical: 15), // Koko
-                        primary: const Color.fromARGB(255, 0, 247,
-                            255), // Aseta taustaväri haluamaksesi väriksi
+                        primary: const Color.fromARGB(255, 0, 247, 255),
                         onPrimary: Colors.white, // Tekstin väri
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              5), // Pienennä reunojen kokoa
+                          borderRadius: BorderRadius.circular(5),
                         ),
-                        visualDensity:
-                            VisualDensity.compact, // Poista harmaa taustareunus
+                        visualDensity: VisualDensity.compact,
                       ),
                       child: Container(
                         width: double.infinity, // Täytä koko leveys
